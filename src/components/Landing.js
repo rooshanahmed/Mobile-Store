@@ -1,14 +1,16 @@
 import React from "react";
-import landing from "../images/landing.png";
 import { makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backgroundColor: '#3C414D',
+        backgroundImage: `url(${process.env.PUBLIC_URL + '/images/bg.jpg'})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        opacity: '85%',
     },
     img: {
         height: '600px',
@@ -34,12 +36,11 @@ function Landing() {
   return (
     <div className={classes.root}>
         <div className={classes.textRoot}>
-        <Typography className={classes.mainText}>Apple Store</Typography>
-        <Typography className={classes.subText}>
+        {/* <Typography className={classes.mainText}>Welcome To Apple Store</Typography> */}
+        {/* <Typography className={classes.subText}>
             The Phone You Always Desired
-        </Typography>
+        </Typography> */}
       </div>
-      <img src={landing} alt="landing" className={classes.img} />
     </div>
   );
 }

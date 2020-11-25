@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
   text: {
     fontFamily: "Ubuntu",
     color: "black",
-    fontSize: "24px",
+    fontSize: "28px",
+    fontWeight: "bold",
   },
   btn: {
     display: "flex",
@@ -38,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
   button: {
     margin: "14px",
   },
+  store: {
+    color: "#6F5A5A",
+  },
 }));
 
 const Header = () => {
@@ -48,7 +52,9 @@ const Header = () => {
     <div className={classes.root}>
       <AppBar className={classes.appbar} elevation={0}>
         <Toolbar className={classes.appBarWrapper}>
-          <Typography className={classes.text}>Apple Store</Typography>
+          <Typography className={classes.text}>
+            Apple <span className={classes.store}>Store.</span>
+          </Typography>
           <div className={classes.btn}>
             <Button
               disableTouchRipple
